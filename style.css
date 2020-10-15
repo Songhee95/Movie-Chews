@@ -1,0 +1,10 @@
+/* This is the Header section */
+header {
+  background-color: rgb(85, 5, 25);
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  padding: 30px;
+}
