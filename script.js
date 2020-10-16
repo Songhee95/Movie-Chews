@@ -1,28 +1,17 @@
 $(document).ready(function () {
-  // genres id object
-  var genreArray = {
-    action: 28,
-    adventure: 12,
-    animation: 16,
-    comedy: 35,
-    crime: 80,
-    documentary: 90,
-    drama: 18,
-    family: 10751,
-    fantasy: 14,
-    history: 36,
-    horror: 27,
-    music: 10402,
-    mystery: 9648,
-    romance: 10749,
-    science_fiction: 878,
-    tv_movie: 10770,
-    thriller: 53,
-    war: 10752,
-    western: 37,
-  };
-  var genreId = 28;
+  // selected genre1 value
+  $('#genre1').change(function(){
+    var genreId1 = $(this).val();
+    console.log(genreId1);
+  })
+  // selected genre2 value
+  $('#genre2').change(function(){
+    var genreId2 = $(this).val();
+    console.log(genreId2);
+  })
+
   // movie API call (20 movie list)
+  var genreId = 28;
   movieUrl =
     "https://api.themoviedb.org/3/discover/movie?with_genres=" +
     genreId +
