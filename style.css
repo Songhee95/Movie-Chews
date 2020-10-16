@@ -1,10 +1,18 @@
 /* This is the Header section */
 header {
-  background-color: rgb(85, 5, 25);
+  background-color: rgb(56, 17, 6);
   text-align: center;
 }
 
 h1 {
   color: white;
   padding: 30px;
+}
+body {
+  background-image: url(./Assets/image1.jpg);
+  background-size: 100%;
+}
+label {
+  color: white;
+  text-align: center;
 }
