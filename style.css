@@ -1,6 +1,6 @@
 /* This is the Header section */
 header {
-  background-color: rgb(128, 2, 2);
+  background-color: rgb(231, 148, 39);
   text-align: center;
 }
 
@@ -10,7 +10,7 @@ h1 {
 }
 
 body {
-  background-image: url(./Assets/image5.jpg);
+  background-image: url(./Assets/image4.jpg);
   background-size: 100%;
 }
 
@@ -19,6 +19,15 @@ p {
   text-align: center !important;
   padding-top: 50px;
 }
-.display-movie{
+.display-movie {
   color: white;
+}
+
+#logo {
+  padding: 20px;
+  width: 25%;
+}
+
+#submit {
+  width: 8%;
 }
