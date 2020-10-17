@@ -17,8 +17,10 @@ h3 {
 
 body {
   background-image: url(./Assets/image4.jpg);
+  background-color: black;
   background-size: 100%;
 }
+
 
 p {
   color: white;
@@ -33,4 +35,14 @@ p {
 
 #submit {
   width: 10%;
+}
+
+@media all and (min-width: 500px) {
+  body {
+    background-image: url(./Assets/image4.jpg);
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+  }
 }
