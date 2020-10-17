@@ -1,26 +1,43 @@
 $(document).ready(function () {
+  // pick one genre from 2 user selected genres
+  // pickGenre will show 1 or 2 (1=user1 genre choice/ 2=user2 genre choice)
+  var pickGenre = Math.floor(Math.random()*2 +1);
   // selected genre1 value
-  $('#genre1').change(function(){
+  $("#genre1").change(function () {
     var genreId1 = $(this).val();
-    console.log(genreId1);
-  })
-  // selected genre2 value
-  $('#genre2').change(function(){
+    // movie API call for user select1 (20 movie list)
+    movieUrl =
+      "https://api.themoviedb.org/3/discover/movie?with_genres=" +
+      genreId1 +
+      "&api_key=c1102486df029c0b4c5ea57290e906e6";
+    $.ajax({
+      url: movieUrl,
+      method: "GET",
+    }).then(function (response1) {
+      // if pickGenre == 1, display on the main page);
+      if(pickGenre==1){
+        var user1Title = response1.results[0].title;
+        $('.display-movie').text(user1Title);
+      }
+    });
+  });
+  // movie API call for user select1 (20 movie list)
+  $("#genre2").change(function () {
     var genreId2 = $(this).val();
-    console.log(genreId2);
-  })
-
-  // movie API call (20 movie list)
-  var genreId = 28;
-  movieUrl =
-    "https://api.themoviedb.org/3/discover/movie?with_genres=" +
-    genreId +
-    "&api_key=c1102486df029c0b4c5ea57290e906e6";
-  $.ajax({
-    url: movieUrl,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response);
+    movieUrl =
+      "https://api.themoviedb.org/3/discover/movie?with_genres=" +
+      genreId2 +
+      "&api_key=c1102486df029c0b4c5ea57290e906e6";
+    $.ajax({
+      url: movieUrl,
+      method: "GET",
+    }).then(function (response2) {
+      // if pickGenre ==2, display on the main page
+      if(pickGenre==2){
+        var user2Title =response2.results[0].title;
+        $('.display-movie').text(user2Title); 
+      }
+    });
   });
 });
 
