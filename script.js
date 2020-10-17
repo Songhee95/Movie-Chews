@@ -20,7 +20,9 @@ $(document).ready(function () {
       // if pickGenre == 1, add selected movie title as a data attribute;
       if(pickGenre==1){
         var user1Title = response1.results[pickMovie].title;
+        var user1Poster = response1.results[pickMovie].poster_path;
         $('.display-movie').data('title',user1Title);
+        $('.display-movie').data('src', "http://image.tmdb.org/t/p/w185/"+user1Poster);
       }
       console.log(response1);
     });
@@ -39,21 +41,29 @@ $(document).ready(function () {
       // if pickGenre ==2, add selected movie title as a data attribute
       if(pickGenre==2){
         var user2Title =response2.results[pickMovie].title;
+        var user2Poster = response2.results[pickMovie].poster_path;
         $('.display-movie').data('title',user2Title);
+        $('.display-movie').data('src', "http://image.tmdb.org/t/p/w185/"+user2Poster)
       }
       console.log(response2);
     });
   });
   // if user clicks submit button, display movie title
-  $('#submit').on('click',function(){
+  $('#submit').on('click',function(event){
+    console.log($('.poster'));
+    event.preventDefault();
     console.log('user'+pickGenre+" selected");
     console.log(pickMovie +'th movie picked from 20 movie lists');
     console.log($(".display-movie").data('title'));
     var title = $('.display-movie').data('title');
+    var imgUrl = $('.display-movie').data('src');
     // if user select genres, hide '.welcome' section and show movie title
     if(title!= undefined){
       $('.display-movie').text(title);
       $('.welcome').empty();
+      // if user clicks submit button, poster img will show up
+      var displayImg = $('<img>').attr('src',imgUrl).attr('alt', title);
+      $('.display-movie').append(displayImg);
     }
   })
 
