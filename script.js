@@ -50,7 +50,11 @@ $(document).ready(function () {
     console.log(pickMovie +'th movie picked from 20 movie lists');
     console.log($(".display-movie").data('title'));
     var title = $('.display-movie').data('title');
-    $('.display-movie').text(title);
+    // if user select genres, hide '.welcome' section and show movie title
+    if(title!= undefined){
+      $('.display-movie').text(title);
+      $('.welcome').empty();
+    }
   })
 
 });
