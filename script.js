@@ -14,10 +14,10 @@ $(document).ready(function () {
       url: movieUrl,
       method: "GET",
     }).then(function (response1) {
-      // if pickGenre == 1, display on the main page);
+      // if pickGenre == 1, add selected movie title as a data attribute;
       if(pickGenre==1){
         var user1Title = response1.results[0].title;
-        $('.display-movie').text(user1Title);
+        $('.display-movie').data('title',user1Title);
       }
     });
   });
@@ -32,13 +32,21 @@ $(document).ready(function () {
       url: movieUrl,
       method: "GET",
     }).then(function (response2) {
-      // if pickGenre ==2, display on the main page
+      // if pickGenre ==2, add selected movie title as a data attribute
       if(pickGenre==2){
         var user2Title =response2.results[0].title;
-        $('.display-movie').text(user2Title); 
+        $('.display-movie').data('title',user2Title);
       }
     });
   });
+  // if user clicks submit button, display movie title
+  $('#submit').on('click',function(){
+    console.log('user'+pickGenre+" selected");
+    console.log($(".display-movie").data('title'));
+    var title = $('.display-movie').data('title');
+    $('.display-movie').text(title);
+  })
+
 });
 
 //1. When a user comes to site they will click on a genre from one of the genre inputs.
