@@ -1,26 +1,32 @@
 $(document).ready(function () {
   // selected genre1 value
-  $('#genre1').change(function(){
+  $("#genre1").change(function () {
     var genreId1 = $(this).val();
-    console.log(genreId1);
-  })
-  // selected genre2 value
-  $('#genre2').change(function(){
+    // movie API call for user select1 (20 movie list)
+    movieUrl =
+      "https://api.themoviedb.org/3/discover/movie?with_genres=" +
+      genreId1 +
+      "&api_key=c1102486df029c0b4c5ea57290e906e6";
+    $.ajax({
+      url: movieUrl,
+      method: "GET",
+    }).then(function (response1) {
+      console.log(response1);
+    });
+  });
+  // movie API call for user select1 (20 movie list)
+  $("#genre2").change(function () {
     var genreId2 = $(this).val();
-    console.log(genreId2);
-  })
-
-  // movie API call (20 movie list)
-  var genreId = 28;
-  movieUrl =
-    "https://api.themoviedb.org/3/discover/movie?with_genres=" +
-    genreId +
-    "&api_key=c1102486df029c0b4c5ea57290e906e6";
-  $.ajax({
-    url: movieUrl,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response);
+    movieUrl =
+      "https://api.themoviedb.org/3/discover/movie?with_genres=" +
+      genreId2 +
+      "&api_key=c1102486df029c0b4c5ea57290e906e6";
+    $.ajax({
+      url: movieUrl,
+      method: "GET",
+    }).then(function (response2) {
+      console.log(response2);
+    });
   });
 });
 
