@@ -80,7 +80,7 @@ var errorCallback = (error) => {
   console.log(error);
 };
 
-navigator.geolocation.getCurrentPosition({
+navigator.geolocation.getCurrentPosition(workingCallback, errorCallback, {
   enableHighAccuracy: true,
   timeout: 5000
 });
