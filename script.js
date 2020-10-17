@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  // pick one genre from 2 user selected genres
+  // pickGenre will show 1 or 2 (1=user1 genre choice/ 2=user2 genre choice)
+  var pickGenre = Math.floor(Math.random()*2 +1);
   // selected genre1 value
   $("#genre1").change(function () {
     var genreId1 = $(this).val();
@@ -11,6 +14,11 @@ $(document).ready(function () {
       url: movieUrl,
       method: "GET",
     }).then(function (response1) {
+      // if pickGenre == 1, display on the main page);
+      if(pickGenre==1){
+        var user1Title = response1.results[0].title;
+        $('.display-movie').text(user1Title);
+      }
       console.log(response1);
     });
   });
@@ -25,6 +33,11 @@ $(document).ready(function () {
       url: movieUrl,
       method: "GET",
     }).then(function (response2) {
+      // if pickGenre ==2, display on the main page
+      if(pickGenre==2){
+        var user2Title =response2.results[0].title;
+        $('.display-movie').text(user2Title); 
+      }
       console.log(response2);
     });
   });
