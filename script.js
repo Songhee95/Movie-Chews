@@ -59,3 +59,11 @@ $(document).ready(function () {
 //5. Any one of the users or both can enter their zipcode in the zipcode input.
 //6. the genres will then disappear and then a list of stores with snacks will appear on screen
 //    for the users that will go with their movie.
+
+
+
+
+//1. When a user picks a movie, then they enter their zipcode to find local snacks.
+//2. When the user initiates the yelp api call, local businesses are retrieved related to said snack.
+//3. When the API call is initiated, divs appear containing the store information.
+//4. When the store information shows, then the user gets a picture, description, and proximity.
