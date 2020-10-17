@@ -1,6 +1,6 @@
 /* This is the Header section */
 header {
-  background-color: rgb(128, 2, 2);
+  background-color: rgb(228, 139, 37);
   text-align: center;
 }
 
@@ -10,7 +10,7 @@ h1 {
 }
 
 body {
-  background-image: url(./Assets/image5.jpg);
+  background-image: url(./Assets/image4.jpg);
   background-size: 100%;
 }
 
@@ -18,4 +18,13 @@ p {
   color: white;
   text-align: center !important;
   padding-top: 50px;
+}
+
+#logo {
+  padding: 20px;
+  width: 25%;
+}
+
+#chocolate-submit {
+  width: 10%;
 }
