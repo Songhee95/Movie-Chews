@@ -15,6 +15,7 @@ body {
   background-size: 100%;
 }
 
+
 p {
   color: white;
   text-align: center !important;
@@ -31,4 +32,11 @@ p {
 
 #submit {
   width: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-image: url(./Assets/image4.jpg);
+    background-size: 100%;
+  }
 }
