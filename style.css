@@ -12,7 +12,9 @@ h1 {
 
 body {
   background-image: url(./Assets/image4.jpg);
+  background-color: black;
   background-size: 100%;
+  background-repeat: no-repeat; 
 }
 
 
@@ -34,9 +36,12 @@ p {
   width: 10%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 760px) {
   body {
     background-image: url(./Assets/image4.jpg);
+    background-color: black;
     background-size: 100%;
+    background-repeat: no-repeat; 
+}
   }
 }
