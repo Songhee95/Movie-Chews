@@ -19,6 +19,7 @@ $(document).ready(function () {
         var user1Title = response1.results[0].title;
         $('.display-movie').text(user1Title);
       }
+      console.log(response1);
     });
   });
   // movie API call for user select1 (20 movie list)
@@ -37,6 +38,7 @@ $(document).ready(function () {
         var user2Title =response2.results[0].title;
         $('.display-movie').text(user2Title); 
       }
+      console.log(response2);
     });
   });
 });
