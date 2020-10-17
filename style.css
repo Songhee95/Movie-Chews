@@ -9,6 +9,11 @@ h1 {
   color: white;
   padding: 30px;
 }
+h3 {
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+}
 
 body {
   background-image: url(./Assets/image4.jpg);
@@ -19,9 +24,6 @@ p {
   color: white;
   text-align: center !important;
   padding-top: 50px;
-}
-.display-movie {
-  color: white;
 }
 
 #logo {
