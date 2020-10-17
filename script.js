@@ -72,6 +72,14 @@ $(document).ready(function () {
 //3. When the API call is initiated, divs appear containing the store information.
 //4. When the store information shows, then the user gets a picture, description, and proximity.
 
+var workingCallback = (position) => {
+  console.log(position);
+};
+
+var errorCallback = (error) => {
+  console.log(error);
+};
+
 navigator.geolocation.getCurrentPosition({
   enableHighAccuracy: true,
   timeout: 5000
