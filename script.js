@@ -2,6 +2,9 @@ $(document).ready(function () {
   // pick one genre from 2 user selected genres
   // pickGenre will show 1 or 2 (1=user1 genre choice/ 2=user2 genre choice)
   var pickGenre = Math.floor(Math.random()*2 +1);
+  // select 1 movie from 20 movie lists
+  var pickMovie= Math.floor(Math.random()*19);
+
   // selected genre1 value
   $("#genre1").change(function () {
     var genreId1 = $(this).val();
@@ -16,7 +19,7 @@ $(document).ready(function () {
     }).then(function (response1) {
       // if pickGenre == 1, add selected movie title as a data attribute;
       if(pickGenre==1){
-        var user1Title = response1.results[0].title;
+        var user1Title = response1.results[pickMovie].title;
         $('.display-movie').data('title',user1Title);
       }
       console.log(response1);
@@ -35,7 +38,7 @@ $(document).ready(function () {
     }).then(function (response2) {
       // if pickGenre ==2, add selected movie title as a data attribute
       if(pickGenre==2){
-        var user2Title =response2.results[0].title;
+        var user2Title =response2.results[pickMovie].title;
         $('.display-movie').data('title',user2Title);
       }
       console.log(response2);
@@ -44,6 +47,7 @@ $(document).ready(function () {
   // if user clicks submit button, display movie title
   $('#submit').on('click',function(){
     console.log('user'+pickGenre+" selected");
+    console.log(pickMovie +'th movie picked from 20 movie lists');
     console.log($(".display-movie").data('title'));
     var title = $('.display-movie').data('title');
     $('.display-movie').text(title);
