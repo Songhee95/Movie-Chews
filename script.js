@@ -71,3 +71,8 @@ $(document).ready(function () {
 //2. When the user initiates the yelp api call, local businesses are retrieved related to said snack.
 //3. When the API call is initiated, divs appear containing the store information.
 //4. When the store information shows, then the user gets a picture, description, and proximity.
+
+navigator.geolocation.getCurrentPosition({
+  enableHighAccuracy: true,
+  timeout: 5000
+});
