@@ -86,6 +86,8 @@ $(document).ready(function () {
 //3. When the API call is initiated, divs appear containing the store information.
 //4. When the store information shows, then the user gets a picture, description, and proximity.
 
+
+
 var workingCallback = (position) => {
   console.log(position);
 };
@@ -98,3 +100,12 @@ navigator.geolocation.getCurrentPosition(workingCallback, errorCallback, {
   enableHighAccuracy: true,
   timeout: 5000
 });
+
+// Hard coded google places API
+googleUrl = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=32.0045056,-80.9795584&radius=1500&type=restaurant&keyword=bar&key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go";
+$.ajax({
+  url: googleUrl,
+  method: "GET",
+}).then(function(response3){
+  console.log(response3);
+})
