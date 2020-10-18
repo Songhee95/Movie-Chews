@@ -19,6 +19,8 @@ body {
   background-image: url(./Assets/image4.jpg);
   background-color: black;
   background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 p {
@@ -37,14 +39,14 @@ p {
   margin-top: 40px;
 }
 
-@media all and (min-width: 400px) {
+/* @media all and (min-width: 400px) {
   body {
     background-image: url(./Assets/image4.jpg);
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
   }
-}
+} */
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   #logo {
