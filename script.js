@@ -55,10 +55,12 @@ $(document).ready(function () {
     console.log('user'+pickGenre+" selected");
     console.log(pickMovie +'th movie picked from 20 movie lists');
     console.log($(".display-movie").data('title'));
+    var user1Select = $('#genre1').val();
+    var user2Select = $('#genre2').val();
     var title = $('.display-movie').data('title');
     var imgUrl = $('.display-movie').data('src');
-    // if user select genres, hide '.welcome' section and show movie title
-    if(title!= undefined){
+    // if both user select genres, hide '.welcome' section and show movie title
+    if(user1Select!="" && user2Select!=""){
       $('.display-movie').text(title);
       $('.welcome').empty();
       // if user clicks submit button, poster img will show up
