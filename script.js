@@ -75,6 +75,16 @@ $(document).ready(function () {
       $(".display-poster").append(displayImg);
     }
   });
+  // Hard coded google places API
+  googleUrl =
+  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=32.0045056,-80.9795584&radius=1500&type=restaurant&keyword=bar&key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go";
+$.ajax({
+  url: googleUrl,
+  method: "GET",
+}).then(function (response3) {
+  console.log(response3);
+});
+
 });
 
 //1. When a user comes to site they will click on a genre from one of the genre inputs.
@@ -104,12 +114,4 @@ navigator.geolocation.getCurrentPosition(workingCallback, errorCallback, {
   timeout: 5000,
 });
 
-// Hard coded google places API
-googleUrl =
-  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=32.0045056,-80.9795584&radius=1500&type=restaurant&keyword=bar&key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go";
-$.ajax({
-  url: googleUrl,
-  method: "GET",
-}).then(function (response3) {
-  console.log(response3);
-});
+
