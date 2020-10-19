@@ -1,4 +1,25 @@
 $(document).ready(function () {
+  var genreArray = {
+    28:"Action",
+    12:"Adventure",
+    16:"Animation",
+    35:"Comedy",
+    80:"Crime",
+    99:"Documentary",
+    18:"Drama",
+    10751:"Family",
+    14:"Fantasy",
+    36:"History",
+    27:"Horror",
+    10402:"Music",
+    9648:"Mystery",
+    10749:"Romance",
+    878:"Science Fiction",
+    10770:"Tv Movie",
+    53: "Thriller",
+    10752: "War",
+    37: "Western"
+  }
   // pick one genre from 2 user selected genres
   // pickGenre will show 1 or 2 (1=user1 genre choice/ 2=user2 genre choice)
   var pickGenre = Math.floor(Math.random() * 2 + 1);
@@ -8,6 +29,7 @@ $(document).ready(function () {
   // selected genre1 value
   $("#genre1").change(function () {
     var genreId1 = $(this).val();
+    var chosenGenre1 = genreArray[genreId1];
     // movie API call for user select1 (20 movie list)
     movieUrl =
       "https://api.themoviedb.org/3/discover/movie?with_genres=" +
@@ -26,6 +48,7 @@ $(document).ready(function () {
           "src",
           "http://image.tmdb.org/t/p/w185/" + user1Poster
         );
+        $(".genre-type").data("genre", chosenGenre1);
       }
       console.log(response1);
     });
@@ -33,6 +56,7 @@ $(document).ready(function () {
   // movie API call for user select1 (20 movie list)
   $("#genre2").change(function () {
     var genreId2 = $(this).val();
+    var chosenGenre2 = genreArray[genreId2];
     movieUrl =
       "https://api.themoviedb.org/3/discover/movie?with_genres=" +
       genreId2 +
@@ -50,6 +74,7 @@ $(document).ready(function () {
           "src",
           "http://image.tmdb.org/t/p/w185/" + user2Poster
         );
+        $(".genre-type").data("genre", chosenGenre2);
       }
       console.log(response2);
     });
@@ -64,10 +89,12 @@ $(document).ready(function () {
     console.log($(".display-movie").data("title"));
     var user1Select = $("#genre1").val();
     var user2Select = $("#genre2").val();
+    var genre = $(".genre-type").data('genre');
     var title = $(".display-movie").data("title");
     var imgUrl = $(".display-poster").data("src");
     // if both user select genres, hide '.welcome' section and show movie title
     if (user1Select != "" && user2Select != "") {
+      $(".genre-type").text(genre);
       $(".display-movie").text(title);
       $(".welcome").empty();
       // if user clicks submit button, poster img will show up
