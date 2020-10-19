@@ -103,7 +103,9 @@ $(document).ready(function () {
     }
   });
   // Hard coded google places API
-  googleUrl =
+  $("#next").on("click", function (event){
+    event.preventDefault();
+    googleUrl =
   "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=32.0045056,-80.9795584&radius=1500&type=restaurant&keyword=bar&key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go";
 $.ajax({
   url: googleUrl,
@@ -111,6 +113,8 @@ $.ajax({
 }).then(function (response3) {
   console.log(response3);
 });
+  });
+  
 
 });
 
