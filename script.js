@@ -56,6 +56,7 @@ $(document).ready(function () {
   });
   // if user clicks submit button, display movie title
   $("#submit").on("click", function (event) {
+    $("#show-movie").show();
     console.log($(".poster"));
     event.preventDefault();
     console.log("user" + pickGenre + " selected");
