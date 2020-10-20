@@ -13,12 +13,24 @@ Users also have the option to click go back to redo their selections or press a 
 
 
 # USAGE:
+ 
   User selects a genre
   Clicks submit button
   If visitor doesn't like chosen movie, click go back button
   If user like chosen movie, click get your chews button
 
   
+
+ Mobile view :
+ ![Screen Shot 2020-10-19 at 7 53 49 PM](https://user-images.githubusercontent.com/68311688/96524620-c6f6b600-1246-11eb-88c5-88cda6999b8a.png)
+ 
+ ![Screen Shot 2020-10-19 at 7 33 26 PM](https://user-images.githubusercontent.com/68311688/96524837-54d2a100-1247-11eb-8dea-ee1f8470871b.png)
+
+![Screen Shot 2020-10-19 at 7 38 58 PM](https://user-images.githubusercontent.com/68311688/96524762-23f26c00-1247-11eb-9388-15b4ec1f922e.png)
+
+![Screen Shot 2020-10-19 at 8 33 49 PM](https://user-images.githubusercontent.com/68311688/96526026-7a14de80-124a-11eb-9965-f7133a3be835.png)
+
+
 # Credits:
 
  Collaborators of Movie Chews:
@@ -28,6 +40,7 @@ Users also have the option to click go back to redo their selections or press a 
   https://github.com/laShawnfox
 
   Third-party assets image by Gerd Altman from Pixabay,  https://pixabay.com/illustrations/curtain-cinema-red-theater-595006/
+
 
 # License
   MIT License
@@ -51,3 +64,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+

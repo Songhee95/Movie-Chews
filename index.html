@@ -94,28 +94,33 @@
       </div>
     </div>
 
-    <!-- GoBack/NEXT Buttons-->
-
     <!-- DISPLAY RESPONSE FROM AJAX -->
     <div class="container">
       <div id="show-movie" style="display: none">
+        <p class="row genre-type justify-content-around"></p>
         <h3 class="row display-movie justify-content-around"></h3>
         <div class="row display-poster justify-content-around"></div>
-        <div class="row justify-content-center">
+        <!-- GoBack/NEXT Buttons-->
+        <div class="row justify-content-center afterBtn">
           <button type="button" id="goBack" class="btn btn-secondary btn-sm">
             Go Back
           </button>
 
-          <button
-            type="button"
-            id="next"
-            class="btn btn-secondary btn-sm active"
-          >
-            Next
+          <button type="button" id="next" class="btn btn-secondary btn-sm">
+            Get Your Chews
           </button>
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row justify-content-around">
+        <h3 id="snap-selection"></h3>
+      </div>
+      <div class="row justify-content-around">
+        <img id="snack-image" />
+      </div>
+    </div>
+    <div id='map'></div>
     <!--[if lt IE 7]>
      
     

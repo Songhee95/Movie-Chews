@@ -1,13 +1,39 @@
 $(document).ready(function () {
+  var genreArray = {
+    28:"Action",
+    12:"Adventure",
+    16:"Animation",
+    35:"Comedy",
+    80:"Crime",
+    99:"Documentary",
+    18:"Drama",
+    10751:"Family",
+    14:"Fantasy",
+    36:"History",
+    27:"Horror",
+    10402:"Music",
+    9648:"Mystery",
+    10749:"Romance",
+    878:"Science Fiction",
+    10770:"Tv Movie",
+    53: "Thriller",
+    10752: "War",
+    37: "Western"
+  }
+  var pickGenre;
+  var pickMovie;
   // pick one genre from 2 user selected genres
   // pickGenre will show 1 or 2 (1=user1 genre choice/ 2=user2 genre choice)
-  var pickGenre = Math.floor(Math.random() * 2 + 1);
-  // select 1 movie from 20 movie lists
-  var pickMovie = Math.floor(Math.random() * 19);
-
+  function pickRandomGenre(){
+    pickGenre = Math.floor(Math.random() * 2 + 1);
+    // select 1 movie from 20 movie lists
+    pickMovie = Math.floor(Math.random() * 19);
+  }
   // selected genre1 value
   $("#genre1").change(function () {
+    pickRandomGenre();
     var genreId1 = $(this).val();
+    var chosenGenre1 = genreArray[genreId1];
     // movie API call for user select1 (20 movie list)
     movieUrl =
       "https://api.themoviedb.org/3/discover/movie?with_genres=" +
@@ -26,6 +52,7 @@ $(document).ready(function () {
           "src",
           "http://image.tmdb.org/t/p/w185/" + user1Poster
         );
+        $(".genre-type").data("genre", chosenGenre1);
       }
       console.log(response1);
     });
@@ -33,6 +60,7 @@ $(document).ready(function () {
   // movie API call for user select1 (20 movie list)
   $("#genre2").change(function () {
     var genreId2 = $(this).val();
+    var chosenGenre2 = genreArray[genreId2];
     movieUrl =
       "https://api.themoviedb.org/3/discover/movie?with_genres=" +
       genreId2 +
@@ -50,6 +78,7 @@ $(document).ready(function () {
           "src",
           "http://image.tmdb.org/t/p/w185/" + user2Poster
         );
+        $(".genre-type").data("genre", chosenGenre2);
       }
       console.log(response2);
     });
@@ -57,6 +86,7 @@ $(document).ready(function () {
   // if user clicks submit button, display movie title
   $("#submit").on("click", function (event) {
     $("#show-movie").show();
+    $(".afterBtn").show();
     console.log($(".poster"));
     event.preventDefault();
     console.log("user" + pickGenre + " selected");
@@ -64,17 +94,53 @@ $(document).ready(function () {
     console.log($(".display-movie").data("title"));
     var user1Select = $("#genre1").val();
     var user2Select = $("#genre2").val();
+    var genre = $(".genre-type").data('genre');
     var title = $(".display-movie").data("title");
     var imgUrl = $(".display-poster").data("src");
     // if both user select genres, hide '.welcome' section and show movie title
     if (user1Select != "" && user2Select != "") {
+      $(".genre-type").text(genre);
       $(".display-movie").text(title);
-      $(".welcome").empty();
+      $(".welcome").hide();
       // if user clicks submit button, poster img will show up
       var displayImg = $("<img>").attr("src", imgUrl).attr("alt", title);
       $(".display-poster").append(displayImg);
     }
   });
+   // if user clicks GO BACK button, display the first input section
+   $("#goBack").on("click",function(){
+     pickRandomGenre();
+    $(".genre-type").empty();
+    $(".display-movie").empty();
+    $(".display-poster").empty();
+    $(".afterBtn").hide();
+    $(".welcome").show();
+    $("#genre1").val("");
+    $("#genre2").val("");
+})
+  // Hard coded google places API
+ 
+   
+   
+ 
+ 
+ 
+ 
+  $("#next").on("click", function (event){
+    document.getElementById("show-movie").style.display = "none"
+    event.preventDefault();
+    
+    googleUrl =
+  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go&libraries=places";
+$.ajax({
+  url: googleUrl,
+  method: "GET",
+}).then(function (response3) {
+  console.log(response3);
+});
+  });
+  
+
 });
 
 //1. When a user comes to site they will click on a genre from one of the genre inputs.
@@ -91,25 +157,5 @@ $(document).ready(function () {
 //3. When the API call is initiated, divs appear containing the store information.
 //4. When the store information shows, then the user gets a picture, description, and proximity.
 
-var workingCallback = (position) => {
-  console.log(position);
-};
 
-var errorCallback = (error) => {
-  console.log(error);
-};
 
-navigator.geolocation.getCurrentPosition(workingCallback, errorCallback, {
-  enableHighAccuracy: true,
-  timeout: 5000,
-});
-
-// Hard coded google places API
-googleUrl =
-  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=32.0045056,-80.9795584&radius=1500&type=restaurant&keyword=bar&key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go";
-$.ajax({
-  url: googleUrl,
-  method: "GET",
-}).then(function (response3) {
-  console.log(response3);
-});
