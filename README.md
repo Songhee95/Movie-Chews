@@ -13,7 +13,15 @@ Users also have the option to click go back to redo their selections or press a 
 
 
 # USAGE:
- Screenshots GO here 
+ Mobile view :
+ ![Screen Shot 2020-10-19 at 7 53 49 PM](https://user-images.githubusercontent.com/68311688/96524620-c6f6b600-1246-11eb-88c5-88cda6999b8a.png)
+ 
+ ![Screen Shot 2020-10-19 at 7 33 26 PM](https://user-images.githubusercontent.com/68311688/96524837-54d2a100-1247-11eb-8dea-ee1f8470871b.png)
+
+![Screen Shot 2020-10-19 at 7 38 58 PM](https://user-images.githubusercontent.com/68311688/96524762-23f26c00-1247-11eb-9388-15b4ec1f922e.png)
+
+![Screen Shot 2020-10-19 at 7 39 12 PM](https://user-images.githubusercontent.com/68311688/96524939-906d6b00-1247-11eb-83a8-a9e755c5c8f2.png)
+
 # Credits:
 
  Collaborators of Movie Chews:
