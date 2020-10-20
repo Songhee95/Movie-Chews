@@ -82,6 +82,7 @@ $(document).ready(function () {
   // if user clicks submit button, display movie title
   $("#submit").on("click", function (event) {
     $("#show-movie").show();
+    $(".afterBtn").show();
     console.log($(".poster"));
     event.preventDefault();
     console.log("user" + pickGenre + " selected");
@@ -96,12 +97,22 @@ $(document).ready(function () {
     if (user1Select != "" && user2Select != "") {
       $(".genre-type").text(genre);
       $(".display-movie").text(title);
-      $(".welcome").empty();
+      $(".welcome").hide();
       // if user clicks submit button, poster img will show up
       var displayImg = $("<img>").attr("src", imgUrl).attr("alt", title);
       $(".display-poster").append(displayImg);
     }
   });
+   // if user clicks GO BACK button, display the first input section
+   $("#goBack").on("click",function(){
+    $(".genre-type").empty();
+    $(".display-movie").empty();
+    $(".display-poster").empty();
+    $(".afterBtn").hide();
+    $(".welcome").show();
+    $("#genre1").val("");
+    $("#genre2").val("");
+})
   // Hard coded google places API
   $("#next").on("click", function (event){
     event.preventDefault();
