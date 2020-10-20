@@ -20,14 +20,18 @@ $(document).ready(function () {
     10752: "War",
     37: "Western"
   }
+  var pickGenre;
+  var pickMovie;
   // pick one genre from 2 user selected genres
   // pickGenre will show 1 or 2 (1=user1 genre choice/ 2=user2 genre choice)
-  var pickGenre = Math.floor(Math.random() * 2 + 1);
-  // select 1 movie from 20 movie lists
-  var pickMovie = Math.floor(Math.random() * 19);
-
+  function pickRandomGenre(){
+    pickGenre = Math.floor(Math.random() * 2 + 1);
+    // select 1 movie from 20 movie lists
+    pickMovie = Math.floor(Math.random() * 19);
+  }
   // selected genre1 value
   $("#genre1").change(function () {
+    pickRandomGenre();
     var genreId1 = $(this).val();
     var chosenGenre1 = genreArray[genreId1];
     // movie API call for user select1 (20 movie list)
@@ -105,6 +109,7 @@ $(document).ready(function () {
   });
    // if user clicks GO BACK button, display the first input section
    $("#goBack").on("click",function(){
+     pickRandomGenre();
     $(".genre-type").empty();
     $(".display-movie").empty();
     $(".display-poster").empty();
