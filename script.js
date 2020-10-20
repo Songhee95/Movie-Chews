@@ -120,25 +120,31 @@ $(document).ready(function () {
 })
   // Hard coded google places API
  
+   document.getElementById("pac-card").style.display = "none";
    
-   
  
  
  
  
-  $("#next").on("click", function (event){
-    document.getElementById("show-movie").style.display = "none"
-    event.preventDefault();
+  //$("#next").on("click", function (event){
+   // document.getElementById("show-movie").style.display = "none"
+   // event.preventDefault();
     
-    googleUrl =
-  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go&libraries=places";
-$.ajax({
-  url: googleUrl,
-  method: "GET",
-}).then(function (response3) {
-  console.log(response3);
-});
-  });
+   // googleUrl =
+ // "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go&libraries=places";
+//$.ajax({
+  //url: googleUrl,
+ // method: "GET",
+//}).then(function (response3) {
+  //console.log(response3);
+ //var input = document.getElementById('autocomplete');
+  //var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
+  //google.maps.event.addListener(autocomplete, 'place-changed', function(){
+    //var place = autocomplete.getPlace();
+ // })
+
+//});
+ // });
   
 
 });
