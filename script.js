@@ -103,10 +103,19 @@ $(document).ready(function () {
     }
   });
   // Hard coded google places API
+ 
+   
+   
+ 
+ 
+ 
+ 
   $("#next").on("click", function (event){
+    document.getElementById("show-movie").style.display = "none"
     event.preventDefault();
+    
     googleUrl =
-  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go";
+  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyAyLbfGbyq8CGTJn2b932bCsj_DIeN18go&libraries=places";
 $.ajax({
   url: googleUrl,
   method: "GET",
