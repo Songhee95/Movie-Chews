@@ -20,7 +20,7 @@ Users also have the option to click go back to redo their selections or press a 
 
 ![Screen Shot 2020-10-19 at 7 38 58 PM](https://user-images.githubusercontent.com/68311688/96524762-23f26c00-1247-11eb-9388-15b4ec1f922e.png)
 
-![Screen Shot 2020-10-19 at 7 39 12 PM](https://user-images.githubusercontent.com/68311688/96524939-906d6b00-1247-11eb-83a8-a9e755c5c8f2.png)
+![Screen Shot 2020-10-19 at 8 33 49 PM](https://user-images.githubusercontent.com/68311688/96526026-7a14de80-124a-11eb-9965-f7133a3be835.png)
 
 # Credits:
 
