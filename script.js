@@ -1,6 +1,6 @@
-document.getElementById("pac-card").style.display = "none";
+
 $(document).ready(function () {
-  document.getElementById("pac-card").style.display = "none";
+  
   var genreArray = {
     28:"Action",
     12:"Adventure",
