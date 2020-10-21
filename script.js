@@ -113,7 +113,14 @@ $(document).ready(function () {
   titleArr = JSON.parse(localStorage.getItem("title"));
   $("#local-storage-btn").on("click", function () {
     var lastTitle = titleArr.length-1;
-    $("#logs").text("<"+titleArr[lastTitle-1] +"> <"+ titleArr[lastTitle-2] +"> <"+ titleArr[lastTitle-3]+">");
+    $("#local-storage-btn").on("click", function () {
+      var lastTitle = titleArr.length-1;
+      if(titleArr.length>2){
+        $("#logs").text("<"+titleArr[lastTitle-1] +"> <"+ titleArr[lastTitle-2] +"> <"+ titleArr[lastTitle-3]+">");
+      }else{
+        $('#logs').text("<"+titleArr+">");
+      }
+    });
   });
   $("#clear-btn").on("click", function () {
     $("#logs").empty();
