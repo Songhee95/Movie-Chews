@@ -70,7 +70,7 @@ h3 {
 }
 
 #map #infowindow-content {
-  display:inline;
+  display: inline;
 }
 
 .pac-card {
@@ -97,7 +97,7 @@ h3 {
 
 .pac-controls label {
   font-family: Roboto;
-  font-size:13px;
+  font-size: 13px;
   font-weight: 300;
 }
 
@@ -107,26 +107,58 @@ h3 {
   font-size: 15px;
   font-weight: 300;
   margin-left: 12px;
-  padding:0 11px 0 13px;
+  padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 400px;
 }
 
 #pac-input:focus {
   border-color: #4d90fe;
-  
 }
 
-#title {
+/* #title {
   color: #fff;
   background-color: #4d90fe;
   font-size: 25px;
   font-weight: 500;
   padding: 6px 12px;
+} */
+
+#page-container {
+  position: relative;
+  min-height: 100px;
 }
 
+#content-wrap {
+  padding-bottom: 100px;
+}
+#footer {
+  background-color: rgb(231, 148, 39);
+  /* text-align: center;
+  height: 55px; */
+  /* position: absolute;
+  bottom: -0;
+  width: 100%; */
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/
+  height: 50px;
+}
 
-
+#local-storage-btn {
+  float: right;
+  background-color: rgb(129, 12, 12);
+  color: white;
+  border: none;
+  border-radius: 5%;
+  margin-right: 20px;
+}
+#local-storage-btn:hover {
+  background-color: white;
+  color: rgb(129, 12, 12);
+}
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
