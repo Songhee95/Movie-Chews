@@ -146,7 +146,7 @@ h3 {
   height: 50px;
 }
 
-#local-storage-btn {
+#local-storage-btn, #clear-btn {
   float: right;
   background-color: rgb(129, 12, 12);
   color: white;
@@ -154,7 +154,7 @@ h3 {
   border-radius: 5%;
   margin-right: 20px;
 }
-#local-storage-btn:hover {
+#local-storage-btn:hover, #clear-btn:hover {
   background-color: white;
   color: rgb(129, 12, 12);
 }
