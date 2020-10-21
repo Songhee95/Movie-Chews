@@ -234,11 +234,11 @@ $(document).ready(function () {
         autocomplete.setOptions({ strictBounds: this.checked });
       });
   }
-  $("#next").on("click", function () {
-    document.getElementById("show-movie").style.display = "none";
-    initMap();
-    console.log(initMap());
-  });
+  //$("#next").on("click", function () {
+    //document.getElementById("show-movie").style.display = "none";
+    //initMap();
+    //console.log(initMap());
+  //});
 });
 
 //1. When a user comes to site they will click on a genre from one of the genre inputs.
