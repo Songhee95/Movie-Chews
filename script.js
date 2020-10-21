@@ -113,6 +113,14 @@ $(document).ready(function () {
   });
   titleArr = JSON.parse(localStorage.getItem("title"));
   $("#local-storage-btn").on("click", function () {
+    if(titleArr.length>3){
+      var tempArr = [];
+      for(var i=titleArr.length-1; i>titleArr.length-4; i--){
+        tempArr.push(titleArr[i]);
+      }
+      titleArr=[];
+      titleArr = tempArr;
+    }
     $("#logs").text(titleArr);
   });
   $("#clear-btn").on("click", function () {
