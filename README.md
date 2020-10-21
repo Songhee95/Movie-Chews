@@ -34,6 +34,9 @@ Users also have the option to click go back to redo their selections or press a 
 
 ![Screen Shot 2020-10-21 at 4 04 46 PM (2)](https://user-images.githubusercontent.com/68311688/96786838-d26ced00-13be-11eb-84f8-53dc2ef5bbef.png)
 
+![Screen Shot 2020-10-21 at 5 55 30 PM](https://user-images.githubusercontent.com/68311688/96791692-e4eb2480-13c6-11eb-849e-d86cf2be81e7.png)
+
+
 
 # Credits:
 
