@@ -4,7 +4,13 @@ header {
   text-align: center;
   width: 100%;
 }
-
+body {
+  background-image: url(./Assets/image4.jpg);
+  background-color: black;
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 h1 {
   color: white;
   padding: 30px;
@@ -15,56 +21,113 @@ h3 {
   color: white;
 }
 
-body {
-  background-image: url(./Assets/image4.jpg);
-  background-color: black;
-  background-size: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 p {
   color: white;
   text-align: center !important;
   padding-top: 50px;
 }
 
+h3 {
+  padding-bottom: 20px;
+}
+/* Here are all the classes */
 .welcome {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
 
-#logo {
-  padding: 20px;
-  width: 300px;
+.btn-secondary {
+  margin: 30px;
 }
-
+/* Here are all the Ids */
 #submit {
   width: 120px;
   height: 60px;
   margin-top: 40px;
 }
-.btn-secondary {
-  margin: 30px;
+#logo {
+  padding: 20px;
+  width: 300px;
 }
-
-h3 {
-  padding-bottom: 20px;
-}
-
 #goBack,
 #next {
   background-color: rgb(129, 12, 12);
   border: none;
 }
 #map {
-  height:100%;
-  margin:0px;
-  padding:0px;
+  height: 100%;
 }
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display:inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12 px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+  color: #fff;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size:13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding:0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+  
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+
+
+
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   #logo {
@@ -72,9 +135,5 @@ h3 {
   }
   .span3 {
     width: 60%;
-  }
-
-  body {
-    background-size: 100%;
   }
 }
