@@ -150,11 +150,7 @@ $(document).ready(function () {
 
 //});
  // });
-  
-
-});
-
-function initMap() {
+ function initMap() {
   document.getElementById("pac-card").style.display = "inline"
   const map = new google.maps.Map(document.getElementById("map"),{
     center:{ lat: -33.8688, lng:151.2195},
@@ -232,11 +228,16 @@ function initMap() {
     });
 
 }
-$("#next").on("click", function (event){
-  event.preventDefault();
+$("#next").on("click", function (){
+  
   document.getElementById("show-movie").style.display = "none";
   initMap();
+  console.log(initMap());
 })
+
+});
+
+
 //1. When a user comes to site they will click on a genre from one of the genre inputs.
 //2. A second user will also choose a genre.
 //3. Any user will be able to press submit.
