@@ -3,7 +3,7 @@
 # Description:
 
  Movie Chews helps visitors to the site to choose a movie by genre. When there is more than one user, visitors can do a toss up by selecting their genre of choice from one of the selectors on screen. This application also  selects a snack to pair with the winning movie and notifies visitor of snack locations.
- Link to deployed application: https://matt17merritt.github.io/Movie-Chews/
+ Link to deployed application: https://matt17merritt.github.io/Movie-Chews/ and github repository https://github.com/Matt17Merritt/Movie-Chews.
 
 # Installation:
  When a user comes to site they will click on a genre from one of the genre inputs.
