@@ -122,7 +122,7 @@ $(document).ready(function () {
 })
   // Hard coded google places API
  
-   document.getElementById("pac-card").style.display = "none";
+  
    
  
   
