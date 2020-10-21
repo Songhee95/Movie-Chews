@@ -33,7 +33,7 @@ h3 {
 /* Here are all the classes */
 .welcome {
   position: absolute;
-  top: 80%;
+  top: 100%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -134,6 +134,15 @@ h3 {
 #content-wrap {
   padding-bottom: 100px;
 }
+#logs {
+  background-color: white;
+  color: rgb(129, 12, 12);
+  width: 100%;
+  position: fixed;
+  height: 90px;
+  bottom: 0;
+  display: none;
+}
 #footer {
   background-color: rgb(231, 148, 39);
   font-weight: bold;
@@ -168,31 +177,8 @@ h3 {
     width: 60%;
   }
 }
-@media screen and (max-width: 995px) {
-  #footer {
-    height: 60px;
-  }
-  #local-storage-btn,
-  #clear-btn {
-    margin: 5px;
-  }
-  /* .welcome {
-    top: 190%;
-  } */
-}
-@media screen and (max-width: 770px) {
-  /* .welcome {
-    top: 190%;
-  } */
-  #local-storage-btn,
-  #clear-btn {
-    margin: 10px;
-  }
-}
+
 @media screen and (max-width: 752px) {
-  #footer {
-    height: 100px;
-  }
   .welcome {
     top: 140%;
   }
