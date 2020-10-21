@@ -33,10 +33,13 @@ h3 {
 /* Here are all the classes */
 .welcome {
   position: absolute;
-  top: 45%;
+  top: 80%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+.row {
+  margin: auto 0 !important;
 }
 
 .btn-secondary {
@@ -133,20 +136,16 @@ h3 {
 }
 #footer {
   background-color: rgb(231, 148, 39);
-  /* text-align: center;
-  height: 55px; */
-  /* position: absolute;
-  bottom: -0;
-  width: 100%; */
+
   position: fixed;
   padding: 10px;
   bottom: 0;
   width: 100%;
-  /* Height of the footer*/
   height: 50px;
 }
 
-#local-storage-btn, #clear-btn {
+#local-storage-btn,
+#clear-btn {
   float: right;
   background-color: rgb(129, 12, 12);
   color: white;
@@ -154,7 +153,8 @@ h3 {
   border-radius: 5%;
   margin-right: 20px;
 }
-#local-storage-btn:hover, #clear-btn:hover {
+#local-storage-btn:hover,
+#clear-btn:hover {
   background-color: white;
   color: rgb(129, 12, 12);
 }
@@ -166,5 +166,34 @@ h3 {
   }
   .span3 {
     width: 60%;
+  }
+}
+@media screen and (max-width: 995px) {
+  #footer {
+    height: 60px;
+  }
+  #local-storage-btn,
+  #clear-btn {
+    margin: 5px;
+  }
+  /* .welcome {
+    top: 190%;
+  } */
+}
+@media screen and (max-width: 770px) {
+  /* .welcome {
+    top: 190%;
+  } */
+  #local-storage-btn,
+  #clear-btn {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 752px) {
+  #footer {
+    height: 100px;
+  }
+  .welcome {
+    top: 140%;
   }
 }
