@@ -113,6 +113,14 @@ $(document).ready(function () {
     }
   });
   titleArr = JSON.parse(localStorage.getItem('title'));
+  $("#local-storage-btn").on("click", function(){
+    $("#logs").text(titleArr);
+  })
+  $("#clear-btn").on('click', function(){
+    $('#logs').empty();
+    titleArr = [];
+    localStorage.setItem('title', JSON.stringify(titleArr));
+  })
    // if user clicks GO BACK button, display the first input section
    $("#goBack").on("click",function(){
      pickRandomGenre();
