@@ -7,22 +7,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Find Your Chews</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+       <!-- Styling of Map and Locator -->
         <style>
             #map {
   height: 100%;
 }
 
-/* Optional: Makes the sample page fill the window. */
 html,
 body {
   height: 100%;
@@ -55,7 +52,7 @@ body {
   -moz-box-sizing: border-box;
   outline: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
+  background-color: rgb(231, 148, 39);
   font-family: Roboto;
 }
 
@@ -72,7 +69,7 @@ body {
 .pac-controls label {
   font-family: Roboto;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #pac-input {
@@ -92,16 +89,17 @@ body {
 
 #title {
   color: #fff;
-  background-color: #4d90fe;
+  background-color:black;
   font-size: 25px;
   font-weight: 500;
   padding: 6px 12px;
 }
             
         </style>
+        <!-- Divs that hold the map and chews locator. -->
         <div class="pac-card" id="pac-card" style="display: none">
             <div>
-              <div id="title">Autocomplete Search</div>
+              <div id="title">Chews Locator</div>
               <div id="type-selector" class="pac-controls">
                 <input
                   type="radio"
@@ -117,12 +115,12 @@ body {
                 <input type="radio" name="type" id="changetype-address" />
                 <label for="changetype-address">Addresses</label>
   
-                <input type="radio" name="type" id="changetype-geocode" />
-                <label for="changetype-geocode">Geocodes</label>
+                
+                <label for="changetype-geocode"></label>
               </div>
               <div id="strict-bounds-selector" class="pac-controls">
-                <input type="checkbox" id="use-strict-bounds" value="" />
-                <label for="use-strict-bounds">Strict Bounds</label>
+                
+                <label for="use-strict-bounds"></label>
               </div>
             </div>
             <div id="pac-container">
@@ -136,6 +134,7 @@ body {
             <span id="place-address"></span>
           </div>
         </div>
+        <!-- Script that contains initMap which initiates the map and autocompletes the searches. -->
         <script>
             function initMap() {
   document.getElementById("pac-card").style.display = "inline"
@@ -216,6 +215,7 @@ body {
 
 }
         </script>
+        <!-- Api with map callback function -->
         <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2c97MABN8fkDH-pZgAtB7BRa6RlOOkJg&callback=initMap&libraries=places"
         async defer
