@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-  
+  var titleArr = [];
   var genreArray = {
     28:"Action",
     12:"Adventure",
@@ -107,8 +107,12 @@ $(document).ready(function () {
       // if user clicks submit button, poster img will show up
       var displayImg = $("<img>").attr("src", imgUrl).attr("alt", title);
       $(".display-poster").append(displayImg);
+      titleArr.push(title);
+      console.log(titleArr);
+      localStorage.setItem('title', JSON.stringify(titleArr));
     }
   });
+  titleArr = JSON.parse(localStorage.getItem('title'));
    // if user clicks GO BACK button, display the first input section
    $("#goBack").on("click",function(){
      pickRandomGenre();
