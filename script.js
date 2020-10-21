@@ -86,8 +86,6 @@ $(document).ready(function () {
   });
   // if user clicks submit button, display movie title
   $("#submit").on("click", function (event) {
-    $("#show-movie").show();
-    $(".afterBtn").show();
     console.log($(".poster"));
     event.preventDefault();
     console.log("user" + pickGenre + " selected");
@@ -100,6 +98,7 @@ $(document).ready(function () {
     var imgUrl = $(".display-poster").data("src");
     // if both user select genres, hide '.welcome' section and show movie title
     if (user1Select != "" && user2Select != "") {
+      $("#show-movie").show();
       $(".genre-type").text(genre);
       $(".display-movie").text(title);
       $(".welcome").hide();
@@ -126,7 +125,7 @@ $(document).ready(function () {
     $(".genre-type").empty();
     $(".display-movie").empty();
     $(".display-poster").empty();
-    $(".afterBtn").hide();
+    $("#show-movie").hide();
     $(".welcome").show();
     $("#genre1").val("");
     $("#genre2").val("");
